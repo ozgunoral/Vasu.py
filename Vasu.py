@@ -113,7 +113,7 @@ def SendEmails(BirthdaysList):
         msg["To"] = to_address
         msg["Subject"] = subject
         
-        msgText = MIMEText('<b>%s</b><br><img src="cid:%s"><br>' % (body, "Chocolate_cake"), 'html')
+        msgText = MIMEText('<b>%s</b><br><img src="cid:%s"<br><b>%s</b>' % (body, "Chocolate_cake", "To check out Vasu.py : https://github.com/ozgunoral/Vasu.py"), 'html')
         msg.attach(msgText)
         
         fp = open(attachment, 'rb')                                                    
@@ -137,7 +137,7 @@ def ReportEmails(BirthdaysList):
     
     # Report emails being sent
     if len(BirthdaysList) == 1:
-        print '1 email sent. Thanks for using Vasu.py'
+        print '1 email sent. Thanks for using Vasu.py!'
     else:
         print '%d emails sent. Thanks for using Vasu.py!' % (len(BirthdaysList))
 
